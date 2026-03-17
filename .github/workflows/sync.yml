@@ -1,0 +1,14 @@
+name: Sync Mirror
+on:
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mirror sync
+        run: |
+          git clone --mirror https://github.com/milzer-tech/checkout-main-app
+          cd repo.git
+          git remote set-url --push origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push --mirror
