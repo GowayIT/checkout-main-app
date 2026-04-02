@@ -101,6 +101,9 @@
         setTimeout(() => btn.innerText = 'Copy URL', 1500);
     }
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.9/iframeResizer.contentWindow.min.js"></script>
+</body>
+
 
 </body>
 </html>
